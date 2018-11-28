@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting Real Gubbi7", "Getting Real Gubbi7\Getting Real Gubbi7.csproj", "{D34F14F9-FBAE-4CC7-B1A9-E0F7E47285DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreDataStructure", "CoreDataStructure\CoreDataStructure.csproj", "{D315624C-A9F5-4973-A814-EB98306D69F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D34F14F9-FBAE-4CC7-B1A9-E0F7E47285DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34F14F9-FBAE-4CC7-B1A9-E0F7E47285DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34F14F9-FBAE-4CC7-B1A9-E0F7E47285DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D315624C-A9F5-4973-A814-EB98306D69F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D315624C-A9F5-4973-A814-EB98306D69F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D315624C-A9F5-4973-A814-EB98306D69F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D315624C-A9F5-4973-A814-EB98306D69F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
