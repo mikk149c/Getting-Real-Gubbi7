@@ -24,6 +24,7 @@ namespace Gubbi7_Menu
 			ActionMenu.AddMenuPoint(new ActionPrintConfiguration(configController, name));
 			ActionMenu.AddMenuPoint(new ActionScheduleConfiguration(configController, name));
 			ActionMenu.AddMenuPoint(new ActionDeleteConfiguration(configController, name));
+			ActionMenu.Activate();
 		}
 	}
 }
