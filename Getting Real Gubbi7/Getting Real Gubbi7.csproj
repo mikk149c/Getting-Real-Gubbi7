@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gubbi7 Menu\Gubbi7 Menu.csproj">
+      <Project>{6531e4c0-a937-4a81-8695-ab5f9852590d}</Project>
+      <Name>Gubbi7 Menu</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

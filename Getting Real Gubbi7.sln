@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting Real Gubbi7", "Gett
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreDataStructure", "CoreDataStructure\CoreDataStructure.csproj", "{D315624C-A9F5-4973-A814-EB98306D69F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart Menu", "Smart Menu\Smart Menu.csproj", "{8C841154-D938-48BA-A6D4-6E3F7A1CB830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gubbi7 Menu", "Gubbi7 Menu\Gubbi7 Menu.csproj", "{6531E4C0-A937-4A81-8695-AB5F9852590D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D315624C-A9F5-4973-A814-EB98306D69F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D315624C-A9F5-4973-A814-EB98306D69F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D315624C-A9F5-4973-A814-EB98306D69F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C841154-D938-48BA-A6D4-6E3F7A1CB830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C841154-D938-48BA-A6D4-6E3F7A1CB830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C841154-D938-48BA-A6D4-6E3F7A1CB830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C841154-D938-48BA-A6D4-6E3F7A1CB830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
