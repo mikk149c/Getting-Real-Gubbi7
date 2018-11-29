@@ -24,28 +24,28 @@ namespace Smart_Menu
 		public void Activate()
 		{
 			Console.Clear();
-            displayCursor();
+            DisplayCursor();
 
 		}
 
-        public void displayCursor()
+        public void DisplayCursor()
         {
             Console.SetCursorPosition(0, 0);
             Console.CursorVisible = false;
             Console.WriteLine(mainMenuName);
             Console.WriteLine(menuPointList);
-
+            MenuPointCount();
         }
         //Skriver til Konsollen
-        public void menuPointCount()
+        public void MenuPointCount()
         {
             for (int i = 0; i < menuPointList.Count; i++)
             {
-                displaySelect(i);
+                DisplaySelect(i);
             }
         }
 
-        private void displaySelect(int i)
+        private void DisplaySelect(int i)
         {
             if (i.Equals(pointer))
             {
@@ -59,5 +59,6 @@ namespace Smart_Menu
             }
             
         }
+
     }
 }
