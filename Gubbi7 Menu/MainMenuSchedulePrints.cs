@@ -18,7 +18,14 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			Menu 
+			Menu selectScheduleMenu = new Menu("Planlagte print");
+
+			foreach (string s in scheduleController.GetScheduleNames())
+			{
+				selectScheduleMenu.AddMenuPoint(new ScheduleActionMenu(scheduleController, s));
+			}
+
+			selectScheduleMenu.Activate();
 		}
 	}
 }
