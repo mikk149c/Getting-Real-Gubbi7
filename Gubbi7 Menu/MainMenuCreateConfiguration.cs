@@ -1,13 +1,13 @@
 ﻿using Smart_Menu;
-using Configuration_Data;
+using System;
 
 namespace Gubbi7_Menu
 {
 	internal class MainMenuCreateConfiguration : IMenuPoint
 	{
-		private ConfigController configController;
+		private IMenuConfigController configController;
 
-		public MainMenuCreateConfiguration(ConfigController configController)
+		public MainMenuCreateConfiguration(IMenuConfigController configController)
 		{
 			this.configController = configController;
 		}
@@ -19,8 +19,7 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			Configuration configuration = configController.CreateConfiguration();
-			configController.AddConfiguration(configuration);
+			throw new NotImplementedException();
 		}
 	}
 }

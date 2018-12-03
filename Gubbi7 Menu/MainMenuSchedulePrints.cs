@@ -4,9 +4,9 @@ namespace Gubbi7_Menu
 {
 	internal class MainMenuSchedulePrints : IMenuPoint
 	{
-		private ScheduleController scheduleController;
+		private IMenuSchedualController scheduleController;
 
-		public MainMenuSchedulePrints(ScheduleController scheduleController)
+		public MainMenuSchedulePrints(IMenuSchedualController scheduleController)
 		{
 			this.scheduleController = scheduleController;
 		}

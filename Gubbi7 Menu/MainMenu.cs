@@ -7,7 +7,7 @@ namespace Gubbi7_Menu
 	{
 
 		private Menu mainMenu;
-		public MainMenu(ConfigController configController, ScheduleController scheduleController)
+		public MainMenu(IMenuConfigController configController, IMenuSchedualController scheduleController)
 		{
 
 			mainMenu = new Menu("Main Menu");

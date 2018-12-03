@@ -4,10 +4,10 @@ namespace Gubbi7_Menu
 {
 	internal class ActionDeleteConfiguration : IMenuPoint
 	{
-		private ConfigController configController;
+		private IMenuConfigController configController;
 		private string name;
 
-		public ActionDeleteConfiguration(ConfigController configController, string name)
+		public ActionDeleteConfiguration(IMenuConfigController configController, string name)
 		{
 			this.configController = configController;
 			this.name = name;

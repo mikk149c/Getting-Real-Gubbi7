@@ -4,10 +4,10 @@ namespace Gubbi7_Menu
 {
 	internal class ScheduleActionDelete : IMenuPoint
 	{
-		private ScheduleController scheduleController;
+		private IMenuSchedualController scheduleController;
 		private string name;
 
-		public ScheduleActionDelete(ScheduleController scheduleController, string name)
+		public ScheduleActionDelete(IMenuSchedualController scheduleController, string name)
 		{
 			this.scheduleController = scheduleController;
 			this.name = name;

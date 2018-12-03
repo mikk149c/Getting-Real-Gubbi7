@@ -4,10 +4,10 @@ namespace Gubbi7_Menu
 {
 	internal class ActionScheduleConfiguration : IMenuPoint
 	{
-		private ConfigController configController;
+		private IMenuConfigController configController;
 		private string name;
 
-		public ActionScheduleConfiguration(ConfigController configController, string name)
+		public ActionScheduleConfiguration(IMenuConfigController configController, string name)
 		{
 			this.configController = configController;
 			this.name = name;

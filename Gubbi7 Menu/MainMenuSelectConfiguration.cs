@@ -4,9 +4,9 @@ namespace Gubbi7_Menu
 {
 	internal class MainMenuSelectConfigurationMenu : IMenuPoint
 	{
-		private ConfigController configController;
+		private IMenuConfigController configController;
 
-		public MainMenuSelectConfigurationMenu(ConfigController configController)
+		public MainMenuSelectConfigurationMenu(IMenuConfigController configController)
 		{
 			this.configController = configController;
 		}
@@ -23,7 +23,7 @@ namespace Gubbi7_Menu
 			foreach (string s in configController.GetConfigurationNames())
 			{
 
-				SelectConfiguration.AddMenuPoint(new ConfigurationActionMenu(configController), s);
+				SelectConfiguration.AddMenuPoint(new ConfigurationActionMenu(configController, s));
 
 			}
 
