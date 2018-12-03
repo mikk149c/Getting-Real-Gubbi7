@@ -20,11 +20,11 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			Menu ActionMenu = new Menu("Handling");
-			ActionMenu.AddMenuPoint(new ActionPrintConfiguration(configController, name));
-			ActionMenu.AddMenuPoint(new ActionScheduleConfiguration(configController, name));
-			ActionMenu.AddMenuPoint(new ActionDeleteConfiguration(configController, name));
-			ActionMenu.Activate();
+			Menu actionMenu = new Menu("Handling");
+			actionMenu.AddMenuPoint(new ActionPrintConfiguration(configController, name));
+			actionMenu.AddMenuPoint(new ActionScheduleConfiguration(configController, name));
+			actionMenu.AddMenuPoint(new ActionDeleteConfiguration(configController, name));
+			actionMenu.Activate();
 		}
 	}
 }

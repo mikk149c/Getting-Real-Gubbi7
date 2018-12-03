@@ -18,16 +18,16 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			Menu SelectConfiguration = new Menu("Konfigurationer");
+			Menu selectConfiguration = new Menu("Konfigurationer");
 
 			foreach (string s in configController.GetConfigurationNames())
 			{
 
-				SelectConfiguration.AddMenuPoint(new ConfigurationActionMenu(configController, s));
+				selectConfiguration.AddMenuPoint(new ConfigurationActionMenu(configController, s));
 
 			}
 
-			SelectConfiguration.Activate();
+			selectConfiguration.Activate();
 		}
 	}
 }

@@ -20,9 +20,9 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			Menu ActionMenu = new Menu("Handling");
-			ActionMenu.AddMenuPoint(new ScheduleActionDelete(scheduleController, name));
-			ActionMenu.Activate();
+			Menu actionMenu = new Menu("Handling");
+			actionMenu.AddMenuPoint(new ScheduleActionDelete(scheduleController, name));
+			actionMenu.Activate();
 		}
 	}
 }
