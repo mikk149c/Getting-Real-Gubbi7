@@ -11,7 +11,9 @@ namespace Getting_Real_Gubbi7
 	{
 		static void Main(string[] args)
 		{
-			MainMenu menu = new MainMenu();
+			ConfigController configController = new ConfigController();
+			SchedualController schedualController = new SchedualController();
+			MainMenu menu = new MainMenu(configController, schedualController);
 			menu.StartMenu();
 		}
 	}

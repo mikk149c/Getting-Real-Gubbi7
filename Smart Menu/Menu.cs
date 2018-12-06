@@ -33,21 +33,24 @@ namespace Smart_Menu
             if (!menuPointList.Count.Equals(0))
             {
                 ConsoleKey key;
-                key = Console.ReadKey(true).Key;
-                switch (key)
-                {
-                    case ConsoleKey.UpArrow:
-                        MovePointerUp();
-                        break;
-                    case ConsoleKey.DownArrow:
-                        MovePointerDown();
-                        break;
-                    case ConsoleKey.Enter:
-                         Console.Clear();
-                        menuPointList[pointer].Invoke();
-                        DisplayMenu();
-                        break;
-                }
+				do
+				{
+					key = Console.ReadKey(true).Key;
+					switch (key)
+					{
+						case ConsoleKey.UpArrow:
+							MovePointerUp();
+							break;
+						case ConsoleKey.DownArrow:
+							MovePointerDown();
+							break;
+						case ConsoleKey.Enter:
+							Console.Clear();
+							menuPointList[pointer].Invoke();
+							DisplayMenu();
+							break;
+					}
+				}
 				while (!key.Equals(ConsoleKey.Escape) && !(key.Equals(ConsoleKey.Enter) && ExitAfterInWoke));
 			
             }
@@ -75,8 +78,8 @@ namespace Smart_Menu
             pointer += v;
 			if (pointer < 0)
 			pointer = 0;
-			if (PointerTemp1 > menuPointList.Count - 1)
-				PointerTemp1 = menuPointList.Count - 1;
+			if (pointer > menuPointList.Count - 1)
+				pointer = menuPointList.Count - 1;
 			int PointerTemp2 = pointer;
 			if (!PointerTemp1.Equals(PointerTemp2))
 			{
@@ -89,7 +92,7 @@ namespace Smart_Menu
 		private void UpdateMenuPoint(int i)
 		{
 			int MenuLineCount = Name.Split('\n').Length;
-			Console.SetCursorPosition(0, MenuLineCount + 1);
+			Console.SetCursorPosition(0, MenuLineCount + i);
 			DisplaySelect(i);
 		}
 
@@ -98,7 +101,6 @@ namespace Smart_Menu
             Console.SetCursorPosition(0, 0);
             Console.CursorVisible = false;
             Console.WriteLine(mainMenuName);
-            Console.WriteLine(menuPointList);
             MenuPointCount();
         }
         //Skriver til Konsollen
