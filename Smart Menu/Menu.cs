@@ -24,11 +24,47 @@ namespace Smart_Menu
 		public void Activate()
 		{
 			Console.Clear();
-            DisplayCursor();
+            DisplayMenu();
+            if (!menuPointList.Count.Equals(0))
+            {
+                ConsoleKey key;
+                key = Console.ReadKey(true).Key;
+                switch (key)
+                {
+                    case ConsoleKey.UpArrow:
+                        MovePointerUp();
+                        break;
+                    case ConsoleKey.DownArrow:
+                        MovePointerDown();
+                        break;
+                    case ConsoleKey.Enter:
+                         Console.Clear();
+                        menuPointList[pointer].Invoke();
+                        DisplayMenu();
+                        break;
+                    
+                }
+                    
+            }
 
 		}
 
-        public void DisplayCursor()
+        private void MovePointerDown()
+        {
+            MovePointer(1);
+        }
+
+        private void MovePointerUp()
+        {
+            MovePointer(-1);
+        }
+
+        private void MovePointer(int v)
+        {
+            
+        }
+
+        public void DisplayMenu()
         {
             Console.SetCursorPosition(0, 0);
             Console.CursorVisible = false;
