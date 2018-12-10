@@ -6,7 +6,7 @@ namespace Gubbi7_Menu
 {
 	public interface IMenuSchedualController
 	{
-		IEnumerable<string> GetScheduleNames();
+		List<string> GetScheduleNames();
 		void DeleteSchedule(string name);
 	}
 }

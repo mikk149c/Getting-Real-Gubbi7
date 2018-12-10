@@ -6,6 +6,12 @@ namespace Gubbi7_Menu
 	{
 		private IMenuConfigController configController;
 		private string name;
+		private ConfigurationData configurationData;
+
+		public ActionPrintConfiguration(ConfigurationData configurationData)
+		{
+			this.configurationData = configurationData;
+		}
 
 		public ActionPrintConfiguration(IMenuConfigController configController, string name)
 		{

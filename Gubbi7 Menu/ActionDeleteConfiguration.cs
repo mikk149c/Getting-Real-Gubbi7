@@ -20,7 +20,8 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			configController.DeleteConfiguration(name);
+			if(MenuUtility.ConfirmAction($"slette {name}"))
+				configController.DeleteConfiguration(name);
 		}
 	}
 }

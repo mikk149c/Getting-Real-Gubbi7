@@ -3,6 +3,9 @@ using System;
 
 namespace Gubbi7_Menu
 {
+	struct ConfigurationData {
+
+	}
 	internal class MainMenuCreateConfiguration : IMenuPoint
 	{
 		private IMenuConfigController configController;
@@ -19,7 +22,12 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Infør data");
+			Console.ReadLine();
+			Menu menu = new Menu("Hanling");
+			menu.AddMenuPoint(new ActionSaveConfiguration(new ConfigurationData()));
+			menu.AddMenuPoint(new ActionPrintConfiguration(new ConfigurationData()));
+			menu.Activate();
 		}
 	}
 }

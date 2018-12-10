@@ -9,6 +9,6 @@ namespace Gubbi7_Menu
 		void DeleteConfiguration(string name);
 		void PrintConfiguration(string name);
 		void ScheduleConfiguration(string name);
-		IEnumerable<string> GetConfigurationNames();
+		List<string> GetConfigurationNames();
 	}
 }

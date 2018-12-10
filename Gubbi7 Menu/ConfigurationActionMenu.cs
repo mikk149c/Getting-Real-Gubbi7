@@ -21,6 +21,7 @@ namespace Gubbi7_Menu
 		public void Invoke()
 		{
 			Menu actionMenu = new Menu("Handling");
+			actionMenu.ExitAfterInWoke = true;
 			actionMenu.AddMenuPoint(new ActionPrintConfiguration(configController, name));
 			actionMenu.AddMenuPoint(new ActionScheduleConfiguration(configController, name));
 			actionMenu.AddMenuPoint(new ActionDeleteConfiguration(configController, name));

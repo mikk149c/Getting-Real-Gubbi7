@@ -19,6 +19,7 @@ namespace Gubbi7_Menu
 		public void Invoke()
 		{
 			Menu selectConfiguration = new Menu("Konfigurationer");
+			selectConfiguration.ExitAfterInWoke = true;
 
 			foreach (string s in configController.GetConfigurationNames())
 			{

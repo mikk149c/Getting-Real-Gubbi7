@@ -20,6 +20,7 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
+			if (MenuUtility.ConfirmAction($"slette {name}"))
 			scheduleController.DeleteSchedule(name);
 		}
 	}
