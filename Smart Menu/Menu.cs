@@ -7,10 +7,10 @@ namespace Smart_Menu
 	public class Menu
 	{
 		private string mainMenuName;
-        private List<IMenuPoint> menuPointList = new List<IMenuPoint>();
-        private int pointer = 0;
+		private List<IMenuPoint> menuPointList = new List<IMenuPoint>();
+		private int pointer = 0;
 
-        public string Name { get { return mainMenuName; } set { mainMenuName = value; } }
+		public string Name { get { return mainMenuName; } set { mainMenuName = value; } }
 
 		public int OutputLine { get { return Name.Split('\n').Length + menuPointList.Count + 1; } }
 
@@ -20,7 +20,7 @@ namespace Smart_Menu
 		{
 			Name = mainMenuName;
 		}
-        
+		
 		public void AddMenuPoint(IMenuPoint menuPoint)
 		{
 			menuPointList.Add(menuPoint);
@@ -29,10 +29,10 @@ namespace Smart_Menu
 		public void Activate()
 		{
 			Console.Clear();
-            DisplayMenu();
-            if (!menuPointList.Count.Equals(0))
-            {
-                ConsoleKey key;
+			DisplayMenu();
+			if (!menuPointList.Count.Equals(0))
+			{
+				ConsoleKey key;
 				do
 				{
 					key = Console.ReadKey(true).Key;
@@ -51,9 +51,9 @@ namespace Smart_Menu
 							break;
 					}
 				}
-				while (!key.Equals(ConsoleKey.Escape) && !(key.Equals(ConsoleKey.Enter) && ExitAfterInWoke));
+				while (!key.Equals(ConsoleKey.Escape) && !( key.Equals(ConsoleKey.Enter) && ExitAfterInWoke) );
 			
-            }
+			}
 			else
 			{
 				Console.WriteLine("Der er ingen menupunkter");
@@ -62,20 +62,20 @@ namespace Smart_Menu
 			Console.Clear();
 		}
 
-        private void MovePointerDown()
-        {
-            MovePointer(1);
-        }
+		private void MovePointerDown()
+		{
+			MovePointer(1);
+		}
 
-        private void MovePointerUp()
-        {
-            MovePointer(-1);
-        }
+		private void MovePointerUp()
+		{
+			MovePointer(-1);
+		}
 
-        private void MovePointer(int v)
-        {
-            int PointerTemp1 = pointer;
-            pointer += v;
+		private void MovePointer(int v)
+		{
+			int PointerTemp1 = pointer;
+			pointer += v;
 			if (pointer < 0)
 			pointer = 0;
 			if (pointer > menuPointList.Count - 1)
@@ -87,7 +87,7 @@ namespace Smart_Menu
 				UpdateMenuPoint(PointerTemp2);
 			}
 			Console.SetCursorPosition(0, OutputLine); 
-        }
+		}
 
 		private void UpdateMenuPoint(int i)
 		{
@@ -97,35 +97,36 @@ namespace Smart_Menu
 		}
 
 		public void DisplayMenu()
-        {
-            Console.SetCursorPosition(0, 0);
-            Console.CursorVisible = false;
-            Console.WriteLine(mainMenuName);
-            MenuPointCount();
-        }
-        //Skriver til Konsollen
-        public void MenuPointCount()
-        {
-            for (int i = 0; i < menuPointList.Count; i++)
-            {
-                DisplaySelect(i);
-            }
-        }
+		{
+			Console.Clear();
+			Console.SetCursorPosition(0, 0);
+			Console.CursorVisible = false;
+			Console.WriteLine(mainMenuName);
+			MenuPointCount();
+		}
+		//Skriver til Konsollen
+		public void MenuPointCount()
+		{
+			for (int i = 0; i < menuPointList.Count; i++)
+			{
+				DisplaySelect(i);
+			}
+		}
 
-        private void DisplaySelect(int i)
-        {
-            if (i.Equals(pointer))
-            {
-                Console.BackgroundColor = ConsoleColor.Yellow;
-                Console.WriteLine(menuPointList[i].GetMenuPointName());
-                Console.BackgroundColor = ConsoleColor.Black;
-            }
-            else
-            {
-                Console.WriteLine(menuPointList[i].GetMenuPointName());
-            }
-            
-        }
+		private void DisplaySelect(int i)
+		{
+			if (i.Equals(pointer))
+			{
+				Console.BackgroundColor = ConsoleColor.Blue;
+				Console.WriteLine(menuPointList[i].GetMenuPointName());
+				Console.BackgroundColor = ConsoleColor.Black;
+			}
+			else
+			{
+				Console.WriteLine(menuPointList[i].GetMenuPointName());
+			}
+			
+		}
 
-    }
+	}
 }

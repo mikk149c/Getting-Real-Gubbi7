@@ -14,9 +14,12 @@ namespace Getting_Real_Gubbi7
 			throw new NotImplementedException();
 		}
 
-		public IEnumerable<string> GetConfigurationNames()
+		public List<string> GetConfigurationNames()
 		{
-			throw new NotImplementedException();
+			return new List<string> {
+				"1",
+				"2",
+				"3"};
 		}
 
 		public void PrintConfiguration(string name)

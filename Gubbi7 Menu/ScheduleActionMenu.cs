@@ -21,6 +21,7 @@ namespace Gubbi7_Menu
 		public void Invoke()
 		{
 			Menu actionMenu = new Menu("Handling");
+			actionMenu.ExitAfterInWoke = true;
 			actionMenu.AddMenuPoint(new ScheduleActionDelete(scheduleController, name));
 			actionMenu.Activate();
 		}

@@ -11,7 +11,6 @@ namespace Gubbi7_Menu
 		{
 			mainMenu = new Menu("Main Menu");
 			mainMenu.AddMenuPoint(new MainMenuSelectConfigurationMenu(configController));
-			mainMenu.AddMenuPoint(new MainMenuManualConfiguration(configController));
 			mainMenu.AddMenuPoint(new MainMenuCreateConfiguration(configController));
 			mainMenu.AddMenuPoint(new MainMenuSchedulePrints(scheduleController));
 		}
