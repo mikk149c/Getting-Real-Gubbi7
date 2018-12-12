@@ -41,7 +41,8 @@ namespace Controllers
 
 		public void PrintConfiguration(string name)
 		{
-			throw new NotImplementedException();
+			Configuration config = configRepo.Configurations.Find(x => x.Name == name);
+			PrintController.PrintConfig(config);
 		}
 
 		public void ScheduleConfiguration(string name)

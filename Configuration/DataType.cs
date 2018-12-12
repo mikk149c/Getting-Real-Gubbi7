@@ -1,6 +1,6 @@
 ﻿namespace ConfigurationData
 {
-	enum DataType
+	public enum DataType
 	{
 		Volume,
 		Waight,
