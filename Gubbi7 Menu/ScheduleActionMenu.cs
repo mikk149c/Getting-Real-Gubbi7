@@ -4,12 +4,10 @@ namespace Gubbi7_Menu
 {
 	internal class ScheduleActionMenu : IMenuPoint
 	{
-		private IMenuSchedualController scheduleController;
 		private string name;
 
-		public ScheduleActionMenu(IMenuSchedualController scheduleController, string s)
+		public ScheduleActionMenu(string s)
 		{
-			this.scheduleController = scheduleController;
 			this.name = s;
 		}
 
@@ -22,7 +20,7 @@ namespace Gubbi7_Menu
 		{
 			Menu actionMenu = new Menu("Handling");
 			actionMenu.ExitAfterInWoke = true;
-			actionMenu.AddMenuPoint(new ScheduleActionDelete(scheduleController, name));
+			actionMenu.AddMenuPoint(new ScheduleActionDelete(name));
 			actionMenu.Activate();
 		}
 	}

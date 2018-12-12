@@ -4,12 +4,10 @@ namespace Gubbi7_Menu
 {
 	internal class ConfigurationActionMenu : IMenuPoint
 	{
-		private IMenuConfigController configController;
 		private string name;
 
-		public ConfigurationActionMenu(IMenuConfigController configController, string name)
+		public ConfigurationActionMenu(string name)
 		{
-			this.configController = configController;
 			this.name = name;
 		}
 
@@ -22,9 +20,9 @@ namespace Gubbi7_Menu
 		{
 			Menu actionMenu = new Menu("Handling");
 			actionMenu.ExitAfterInWoke = true;
-			actionMenu.AddMenuPoint(new ActionPrintConfiguration(configController, name));
-			actionMenu.AddMenuPoint(new ActionScheduleConfiguration(configController, name));
-			actionMenu.AddMenuPoint(new ActionDeleteConfiguration(configController, name));
+			actionMenu.AddMenuPoint(new ActionPrintConfiguration(name));
+			actionMenu.AddMenuPoint(new ActionScheduleConfiguration(name));
+			actionMenu.AddMenuPoint(new ActionDeleteConfiguration(name));
 			actionMenu.Activate();
 		}
 	}

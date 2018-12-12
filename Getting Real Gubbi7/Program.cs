@@ -13,7 +13,7 @@ namespace Getting_Real_Gubbi7
 		{
 			ConfigController configController = new ConfigController();
 			SchedualController schedualController = new SchedualController();
-			MainMenu menu = new MainMenu(configController, schedualController);
+			MainMenu menu = new MainMenu();
 			menu.StartMenu();
 		}
 	}

@@ -5,11 +5,15 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting Real Gubbi7", "Getting Real Gubbi7\Getting Real Gubbi7.csproj", "{D34F14F9-FBAE-4CC7-B1A9-E0F7E47285DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreDataStructure", "CoreDataStructure\CoreDataStructure.csproj", "{D315624C-A9F5-4973-A814-EB98306D69F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreDataStructure", "CoreDataStructure\CoreDataStructure.csproj", "{D315624C-A9F5-4973-A814-EB98306D69F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart Menu", "Smart Menu\Smart Menu.csproj", "{8C841154-D938-48BA-A6D4-6E3F7A1CB830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart Menu", "Smart Menu\Smart Menu.csproj", "{8C841154-D938-48BA-A6D4-6E3F7A1CB830}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gubbi7 Menu", "Gubbi7 Menu\Gubbi7 Menu.csproj", "{6531E4C0-A937-4A81-8695-AB5F9852590D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gubbi7 Menu", "Gubbi7 Menu\Gubbi7 Menu.csproj", "{6531E4C0-A937-4A81-8695-AB5F9852590D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{836206B2-2B0B-4116-946E-B979F90EB87E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationData", "Configuration\ConfigurationData.csproj", "{DAA6C8AB-89F8-4080-A334-9C2F5D19568C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6531E4C0-A937-4A81-8695-AB5F9852590D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836206B2-2B0B-4116-946E-B979F90EB87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836206B2-2B0B-4116-946E-B979F90EB87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836206B2-2B0B-4116-946E-B979F90EB87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836206B2-2B0B-4116-946E-B979F90EB87E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA6C8AB-89F8-4080-A334-9C2F5D19568C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA6C8AB-89F8-4080-A334-9C2F5D19568C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA6C8AB-89F8-4080-A334-9C2F5D19568C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA6C8AB-89F8-4080-A334-9C2F5D19568C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,12 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gubbi7_Menu;
 
-namespace Getting_Real_Gubbi7
+namespace Controllers
 {
-	class SchedualController
+	public class SchedualController
 	{
+		private static SchedualController instance;
+
+		private SchedualController()
+		{
+
+		}
+
+		public static SchedualController Instance
+		{
+			get
+			{
+				if (instance == null)
+					instance = new SchedualController();
+				return instance;
+			}
+		}
+
 		public void DeleteSchedule(string name)
 		{
 			throw new NotImplementedException();

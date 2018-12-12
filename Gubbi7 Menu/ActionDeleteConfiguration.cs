@@ -1,15 +1,16 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class ActionDeleteConfiguration : IMenuPoint
 	{
-		private IMenuConfigController configController;
+		private ConfigController configController;
 		private string name;
 
-		public ActionDeleteConfiguration(IMenuConfigController configController, string name)
+		public ActionDeleteConfiguration(string name)
 		{
-			this.configController = configController;
+			this.configController = ConfigController.Instance;
 			this.name = name;
 		}
 
