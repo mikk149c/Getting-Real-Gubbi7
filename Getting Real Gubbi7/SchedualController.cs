@@ -7,7 +7,7 @@ using Gubbi7_Menu;
 
 namespace Getting_Real_Gubbi7
 {
-	class SchedualController : IMenuSchedualController
+	class SchedualController
 	{
 		public void DeleteSchedule(string name)
 		{

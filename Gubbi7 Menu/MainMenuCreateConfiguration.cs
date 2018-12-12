@@ -8,11 +8,9 @@ namespace Gubbi7_Menu
 	}
 	internal class MainMenuCreateConfiguration : IMenuPoint
 	{
-		private IMenuConfigController configController;
 
 		public MainMenuCreateConfiguration()
 		{
-			this.configController = configController;
 		}
 
 		public string GetMenuPointName()

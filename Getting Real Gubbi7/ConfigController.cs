@@ -7,7 +7,7 @@ using Gubbi7_Menu;
 
 namespace Getting_Real_Gubbi7
 {
-	class ConfigController : IMenuConfigController
+	class ConfigController
 	{
 		public void DeleteConfiguration(string name)
 		{

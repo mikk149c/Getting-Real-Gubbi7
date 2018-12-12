@@ -28,7 +28,7 @@ namespace Controllers
 
 		public void DeleteConfiguration(string name)
 		{
-			throw new NotImplementedException();
+			configRepo.Configurations.RemoveAll(x => x.Name.Equals(name));
 		}
 
 		public List<string> GetConfigurationNames()

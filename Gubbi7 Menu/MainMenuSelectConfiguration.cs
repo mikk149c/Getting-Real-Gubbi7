@@ -3,11 +3,11 @@ using Controllers;
 
 namespace Gubbi7_Menu
 {
-	internal class MainMenuSelectConfigurationMenu : IMenuPoint
+	internal class SelectConfigurationMenu : IMenuPoint
 	{
 		private ConfigController configController;
 
-		public MainMenuSelectConfigurationMenu()
+		public SelectConfigurationMenu()
 		{
 			this.configController = ConfigController.Instance;
 		}
