@@ -6,9 +6,9 @@ namespace Gubbi7_Menu
 {
 	public static class MenuUtility
 	{
-		public static bool ConfirmAction(string handling)
+		public static bool ConfirmAction(string action)
 		{
-			Console.WriteLine($"Er du sikker på du vil {handling}.\n'Y' for ja 'N' for nej");
+			Console.WriteLine($"Er du sikker på du vil {action}.\n'Y' for ja 'N' for nej");
 			switch (Console.ReadKey().Key)
 			{
 				case ConsoleKey.Y:

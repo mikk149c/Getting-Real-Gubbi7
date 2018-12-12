@@ -96,7 +96,7 @@ namespace Smart_Menu
 			DisplaySelect(i);
 		}
 
-		public void DisplayMenu()
+		private void DisplayMenu()
 		{
 			Console.Clear();
 			Console.SetCursorPosition(0, 0);
@@ -105,7 +105,7 @@ namespace Smart_Menu
 			MenuPointCount();
 		}
 		//Skriver til Konsollen
-		public void MenuPointCount()
+		private void MenuPointCount()
 		{
 			for (int i = 0; i < menuPointList.Count; i++)
 			{
