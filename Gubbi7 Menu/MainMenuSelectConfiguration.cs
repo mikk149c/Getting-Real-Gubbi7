@@ -1,14 +1,15 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class MainMenuSelectConfigurationMenu : IMenuPoint
 	{
-		private IMenuConfigController configController;
+		private ConfigController configController;
 
-		public MainMenuSelectConfigurationMenu(IMenuConfigController configController)
+		public MainMenuSelectConfigurationMenu()
 		{
-			this.configController = configController;
+			this.configController = ConfigController.Instance;
 		}
 
 		public string GetMenuPointName()
@@ -24,7 +25,7 @@ namespace Gubbi7_Menu
 			foreach (string s in configController.GetConfigurationNames())
 			{
 
-				selectConfiguration.AddMenuPoint(new ConfigurationActionMenu(configController, s));
+				selectConfiguration.AddMenuPoint(new ConfigurationActionMenu(s));
 
 			}
 

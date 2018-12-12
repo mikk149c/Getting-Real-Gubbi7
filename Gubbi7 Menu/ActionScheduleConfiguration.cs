@@ -1,15 +1,16 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class ActionScheduleConfiguration : IMenuPoint
 	{
-		private IMenuConfigController configController;
+		private ConfigController configController;
 		private string name;
 
-		public ActionScheduleConfiguration(IMenuConfigController configController, string name)
+		public ActionScheduleConfiguration(string name)
 		{
-			this.configController = configController;
+			this.configController = ConfigController.Instance;
 			this.name = name;
 		}
 

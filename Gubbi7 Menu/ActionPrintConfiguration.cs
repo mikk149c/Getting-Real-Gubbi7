@@ -1,21 +1,22 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class ActionPrintConfiguration : IMenuPoint
 	{
-		private IMenuConfigController configController;
+		private ConfigController configController;
 		private string name;
 		private ConfigurationData configurationData;
 
 		public ActionPrintConfiguration(ConfigurationData configurationData)
 		{
-			this.configurationData = configurationData;
+			configurationData = configurationData;
 		}
 
-		public ActionPrintConfiguration(IMenuConfigController configController, string name)
+		public ActionPrintConfiguration(string name)
 		{
-			this.configController = configController;
+			this.configController = ConfigController.Instance;
 			this.name = name;
 		}
 

@@ -7,12 +7,12 @@ namespace Gubbi7_Menu
 	{
 
 		private Menu mainMenu;
-		public MainMenu(IMenuConfigController configController, IMenuSchedualController scheduleController)
+		public MainMenu()
 		{
 			mainMenu = new Menu("Main Menu");
-			mainMenu.AddMenuPoint(new MainMenuSelectConfigurationMenu(configController));
-			mainMenu.AddMenuPoint(new MainMenuCreateConfiguration(configController));
-			mainMenu.AddMenuPoint(new MainMenuSchedulePrints(scheduleController));
+			mainMenu.AddMenuPoint(new MainMenuSelectConfigurationMenu());
+			mainMenu.AddMenuPoint(new MainMenuCreateConfiguration());
+			mainMenu.AddMenuPoint(new MainMenuSchedulePrints());
 		}
 
 		public void StartMenu()

@@ -1,14 +1,15 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class MainMenuSchedulePrints : IMenuPoint
 	{
-		private IMenuSchedualController scheduleController;
+		private SchedualController scheduleController;
 
-		public MainMenuSchedulePrints(IMenuSchedualController scheduleController)
+		public MainMenuSchedulePrints()
 		{
-			this.scheduleController = scheduleController;
+			this.scheduleController = SchedualController.Instance;
 		}
 
 		public string GetMenuPointName()
@@ -22,7 +23,7 @@ namespace Gubbi7_Menu
 			selectScheduleMenu.ExitAfterInWoke = true;
 			foreach (string s in scheduleController.GetScheduleNames())
 			{
-				selectScheduleMenu.AddMenuPoint(new ScheduleActionMenu(scheduleController, s));
+				selectScheduleMenu.AddMenuPoint(new ScheduleActionMenu(s));
 			}
 
 			selectScheduleMenu.Activate();

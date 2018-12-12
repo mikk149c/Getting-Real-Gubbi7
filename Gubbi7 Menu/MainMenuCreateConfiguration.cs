@@ -10,7 +10,7 @@ namespace Gubbi7_Menu
 	{
 		private IMenuConfigController configController;
 
-		public MainMenuCreateConfiguration(IMenuConfigController configController)
+		public MainMenuCreateConfiguration()
 		{
 			this.configController = configController;
 		}

@@ -1,15 +1,16 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
 	internal class ScheduleActionDelete : IMenuPoint
 	{
-		private IMenuSchedualController scheduleController;
+		private SchedualController scheduleController;
 		private string name;
 
-		public ScheduleActionDelete(IMenuSchedualController scheduleController, string name)
+		public ScheduleActionDelete(string name)
 		{
-			this.scheduleController = scheduleController;
+			this.scheduleController = SchedualController.Instance;
 			this.name = name;
 		}
 

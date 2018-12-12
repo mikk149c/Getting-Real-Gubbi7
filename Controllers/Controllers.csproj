@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Controllers\Controllers.csproj" />
-    <ProjectReference Include="..\Smart Menu\Smart Menu.csproj" />
+    <ProjectReference Include="..\Configuration\ConfigurationData.csproj" />
   </ItemGroup>
 
 </Project>
