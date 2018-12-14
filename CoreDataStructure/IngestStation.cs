@@ -4,10 +4,17 @@ using ConfigurationData;
 
 namespace CoreDataStructure
 {
-	internal class IngestStation
+	public class IngestStation
 	{
 		private string stationId;
 		private List<Parcel> parcels;
+
+		public IngestStation(string termianlId)
+		{
+			parcels = new List<Parcel>();
+			StationId = termianlId;
+		}
+
 		public string StationId { get { return stationId; } set { stationId = value; } }
 
 		internal string GetData(DataType data, DateTime startTime, DateTime endTime)
@@ -20,19 +27,24 @@ namespace CoreDataStructure
 					break;
 
 				case DataType.Volume:
-					int volume = 0;
+					Double volume = 0;
 					foreach (Parcel p in targetParcels)
 						volume += p.GetVolume();
-					return volume.ToString();
+					return Math.Round(volume, 2).ToString() + " m3";
 					break;
 
-				case DataType.Waight:
-					int weight = 0;
+				case DataType.Weight:
+					double weight = 0;
 					foreach (Parcel p in targetParcels)
 						weight += p.Weight;
-					return weight.ToString();
+					return Math.Round(weight/1000.0, 2).ToString() + " Kg";
 			}
 			return "n/a";
+		}
+
+		internal void RegisterParcel(DateTime date, int weight, int length, int height, int width)
+		{
+			parcels.Add(new Parcel(date, weight, length, height, width));
 		}
 	}
 }

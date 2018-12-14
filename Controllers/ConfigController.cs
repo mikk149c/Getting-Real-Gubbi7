@@ -26,6 +26,18 @@ namespace Controllers
 			}
 		}
 
+		public void AddConfiguration(string name, DateTime startTime, DateTime endTime, TimeSpan interval, List<string> dataTypes, bool realativeTime)
+		{
+			configRepo.Add(
+				name,
+				startTime,
+				endTime,
+				realativeTime,
+				interval,
+				dataTypes
+				);
+		}
+
 		public void DeleteConfiguration(string name)
 		{
 			configRepo.Configurations.RemoveAll(x => x.Name.Equals(name));
@@ -43,6 +55,18 @@ namespace Controllers
 		{
 			Configuration config = configRepo.Configurations.Find(x => x.Name == name);
 			PrintController.PrintConfig(config);
+		}
+
+		public void PrintConfiguration(string name, DateTime startTime, DateTime endTime, TimeSpan interval, List<string> dataTypes, bool relativeTime)
+		{
+			PrintController.PrintConfig(new Configuration(
+				name,
+				startTime,
+				endTime,
+				relativeTime,
+				interval,
+				ConfigRepo.ParsListOfDataTypes(dataTypes)
+				));
 		}
 
 		public void ScheduleConfiguration(string name)

@@ -52,6 +52,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{836206b2-2b0b-4116-946e-b979f90eb87e}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gubbi7 Menu\Gubbi7 Menu.csproj">
       <Project>{6531e4c0-a937-4a81-8695-ab5f9852590d}</Project>
       <Name>Gubbi7 Menu</Name>

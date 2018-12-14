@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CoreDataStructure
 {
-	class LogfileRepo
+	public class LogfileRepo
 	{
 		private List<Logfile> logfiles;
 	}

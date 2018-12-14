@@ -9,7 +9,7 @@ namespace Gubbi7_Menu
 		public static bool ConfirmAction(string action)
 		{
 			Console.WriteLine($"Er du sikker på du vil {action}.\n'Y' for ja 'N' for nej");
-			switch (Console.ReadKey().Key)
+			switch (Console.ReadKey(true).Key)
 			{
 				case ConsoleKey.Y:
 					return true;

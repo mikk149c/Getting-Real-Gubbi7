@@ -3,6 +3,7 @@ using ConfigurationData;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.IO;
 
 namespace Controllers
 {
@@ -10,29 +11,40 @@ namespace Controllers
 	{
 		internal static void PrintConfig(Configuration config)
 		{
-			List<List<List<string>>> print = new List<List<List<string>>>();
+			string print = string.Empty;
 
 			ParcelDataController parcelData = ParcelDataController.Instance;
 			List<DataType> collums = config.Data;
 			List<string> stations = parcelData.GetStationNames();
 			foreach (string s in stations)
 			{
-				List<List<string>> currentStation = new List<List<string>>();
+				print += $"Indføring: {s}\r\n";
 				DateTime timePointer = config.StartTime;
 				do
 				{
-					List<string> row = new List<string>();
 					foreach (DataType d in collums)
 					{
-						row.Add(parcelData.GetData(s, d, timePointer, timePointer + config.Interval));
+						string str = parcelData.GetData(s, d, timePointer, timePointer + config.Interval);
+						print += RightAlign(str, 15);
 					}
+					print += "\r\n";
 					timePointer += config.Interval;
-					currentStation.Add(row);
-				} while (timePointer > config.EndTime);
-				print.Add(currentStation);
+				} while (timePointer < config.EndTime);
+				print += "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
 			}
+			StreamWriter file = File.CreateText("out.txt");
+			file.Write(print);
+			file.Dispose();
+			//Console.WriteLine(print);
+			//Console.ReadKey();
+		}
 
-			//Needs print
+		private static string RightAlign(string str, int fieldSize)
+		{
+			string ret = string.Empty;
+			ret += new string(' ', fieldSize - str.Length);
+			ret += str;
+			return ret;
 		}
 	}
 }

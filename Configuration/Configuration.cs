@@ -15,20 +15,23 @@ namespace ConfigurationData
 		private TimeSpan interval;
 		private List<DataType> data;
 
-		internal Configuration(string name, DateTime startTime, DateTime endTime, bool realativeTime, TimeSpan interval, List<DataType> data)
+		public Configuration(string name, DateTime startTime, DateTime endTime, bool realativeTime, TimeSpan interval, List<DataType> data)
 		{
-			this.Name = name;
-			this.StartTime = startTime;
-			this.EndTime = endTime;
-			this.RealativeTime = realativeTime;
-			this.Interval = interval;
-			this.Data = data;
+			Name = name;
+			StartTime = startTime;
+			EndTime = endTime;
+			RealativeTime = realativeTime;
+			Interval = interval;
+			Data = data;
 		}
-
+		//Stub should be removed when user added configurations work
 		public Configuration(string name)
 		{
-			this.Name = name;
-			Data = new List<DataType> { DataType.Waight, DataType.Volume, DataType.Amount };
+			Name = name;
+			Data = new List<DataType> { DataType.Weight, DataType.Volume, DataType.Amount, DataType.Weight };
+			StartTime = new DateTime(2018, 10, 29, 0, 0, 0);
+			EndTime = new DateTime(2018, 11, 3, 0, 0, 0);
+			Interval = new TimeSpan(0, 1, 0, 0);
 		}
 
 		public string Name { get => name; set => name = value; }
