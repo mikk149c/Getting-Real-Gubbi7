@@ -6,9 +6,9 @@ namespace Gubbi7_Menu
 	{
 		private string name;
 
-		public ScheduleActionMenu(string s)
+		public ScheduleActionMenu(string name)
 		{
-			this.name = s;
+			this.name = name;
 		}
 
 		public string GetMenuPointName()

@@ -44,6 +44,7 @@ namespace Gubbi7_Menu
 				s = Console.ReadLine();
 			}
 			config.realativeTime = false;
+
 			Menu menu = new Menu("Hanling");
 			menu.ExitAfterInWoke = true;
 			menu.AddMenuPoint(new ActionSaveConfiguration(config));
