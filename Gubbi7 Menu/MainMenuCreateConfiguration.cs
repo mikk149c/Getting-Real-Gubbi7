@@ -29,9 +29,9 @@ namespace Gubbi7_Menu
 			ConfigurationData config = new ConfigurationData();
 			Console.WriteLine("Indfør konfiguration navn");
 			config.name = Console.ReadLine();
-			Console.WriteLine("Indfør start dato, format: MM-dd-yyyy");
+			Console.WriteLine("Indfør start dato, format: dd-MM-yyyy");
 			config.startTime = DateTime.Parse(Console.ReadLine());
-			Console.WriteLine("Indfør slut dato, format: MM-dd-yyyy");
+			Console.WriteLine("Indfør slut dato, format: dd-MM-yyyy");
 			config.endTime = DateTime.Parse(Console.ReadLine());
 			Console.WriteLine("Indfør interval tid, format: d.tt:mm:ss");
 			config.interval = TimeSpan.Parse(Console.ReadLine());
