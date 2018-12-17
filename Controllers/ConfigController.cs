@@ -57,11 +57,6 @@ namespace Controllers
 			PrintController.PrintConfig(config);
 		}
 
-		public List<string> GetDataTypes()
-		{
-			return Enum.GetNames(typeof(DataType)).ToList();
-		}
-
 		public void PrintConfiguration(string name, DateTime startTime, DateTime endTime, TimeSpan interval, List<string> dataTypes, bool relativeTime)
 		{
 			PrintController.PrintConfig(new Configuration(
