@@ -14,7 +14,7 @@ namespace Gubbi7_Menu
 
 		public string GetMenuPointName()
 		{
-			return "Gem";
+			return "Gem";	
 		}
 
 		public void Invoke()
