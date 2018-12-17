@@ -1,6 +1,7 @@
 ﻿using Smart_Menu;
 using System;
 using System.Collections.Generic;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
@@ -14,7 +15,6 @@ namespace Gubbi7_Menu
 	}
 	internal class MainMenuCreateConfiguration : IMenuPoint
 	{
-
 		public MainMenuCreateConfiguration()
 		{
 		}
@@ -35,16 +35,17 @@ namespace Gubbi7_Menu
 			config.endTime = DateTime.Parse(Console.ReadLine());
 			Console.WriteLine("Indfør interval tid, format: d.tt:mm:ss");
 			config.interval = TimeSpan.Parse(Console.ReadLine());
-			Console.WriteLine("Indfør ønsket datatyper, mulige datatyper: Weight, Volume, ");
+			Console.WriteLine("Indfør ønsket datatyper");
 			config.dataTypes = new List<string>();
-			string s = Console.ReadLine();
+			string s = "";
+			MenuUtility.SearchMenu(ConfigController.Instance.GetDataTypes(), out s);
 			while (!s.Length.Equals(0))
 			{
 				config.dataTypes.Add(s);
-				s = Console.ReadLine();
+				MenuUtility.SearchMenu(ConfigController.Instance.GetDataTypes(), out s);
 			}
 			config.realativeTime = false;
-			Menu menu = new Menu("Hanling");
+			Menu menu = new Menu("Handling");
 			menu.ExitAfterInWoke = true;
 			menu.AddMenuPoint(new ActionSaveConfiguration(config));
 			menu.AddMenuPoint(new ActionPrintConfigurationFromData(config));
