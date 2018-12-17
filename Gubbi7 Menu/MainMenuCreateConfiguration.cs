@@ -29,13 +29,13 @@ namespace Gubbi7_Menu
 			ConfigurationData config = new ConfigurationData();
 			Console.WriteLine("Indfør konfiguration navn");
 			config.name = Console.ReadLine();
-			Console.WriteLine("Indfør start dato:tid");
+			Console.WriteLine("Indfør start dato, format: MM-dd-yyyy");
 			config.startTime = DateTime.Parse(Console.ReadLine());
-			Console.WriteLine("Indfør slut dato:tid");
+			Console.WriteLine("Indfør slut dato, format: MM-dd-yyyy");
 			config.endTime = DateTime.Parse(Console.ReadLine());
-			Console.WriteLine("Indfør interval tid");
+			Console.WriteLine("Indfør interval tid, format: d.tt:mm:ss");
 			config.interval = TimeSpan.Parse(Console.ReadLine());
-			Console.WriteLine("Indfør ønsket datatyper");
+			Console.WriteLine("Indfør ønsket datatyper, mulige datatyper: Weight, Volume, ");
 			config.dataTypes = new List<string>();
 			string s = Console.ReadLine();
 			while (!s.Length.Equals(0))
