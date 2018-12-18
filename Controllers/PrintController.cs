@@ -31,6 +31,7 @@ namespace Controllers
 					timePointer += config.Interval;
 				} while (timePointer < config.EndTime);
 				print += "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
+				Console.WriteLine(s);
 			}
 			StreamWriter file = File.CreateText("out.txt");
 			file.Write(print);
