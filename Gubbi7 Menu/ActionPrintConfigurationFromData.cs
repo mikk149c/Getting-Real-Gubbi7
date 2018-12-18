@@ -9,6 +9,7 @@ namespace Gubbi7_Menu
 
 		public ActionPrintConfigurationFromData(ConfigurationData config)
 		{
+			this.config = config;
 		}
 
 		public string GetMenuPointName()
