@@ -1,4 +1,5 @@
 ﻿using Smart_Menu;
+using Controllers;
 
 namespace Gubbi7_Menu
 {
@@ -13,12 +14,20 @@ namespace Gubbi7_Menu
 
 		public string GetMenuPointName()
 		{
-			return "Gem";
+			return "Gem";	
 		}
 
 		public void Invoke()
 		{
-			throw new System.NotImplementedException();
+			ConfigController.Instance.AddConfiguration
+				(
+				configurationData.name,
+				configurationData.startTime,
+				configurationData.endTime,
+				configurationData.interval,
+				configurationData.dataTypes,
+				configurationData.realativeTime
+				);
 		}
 	}
 }

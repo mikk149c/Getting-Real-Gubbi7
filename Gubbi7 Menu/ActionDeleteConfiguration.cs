@@ -1,5 +1,6 @@
 ﻿using Smart_Menu;
 using Controllers;
+using System;
 
 namespace Gubbi7_Menu
 {
@@ -22,7 +23,11 @@ namespace Gubbi7_Menu
 		public void Invoke()
 		{
 			if(MenuUtility.ConfirmAction($"slette {name}"))
+			{
 				configController.DeleteConfiguration(name);
+				Console.WriteLine($"{name} blev slettet");
+				Console.ReadKey();
+			}
 		}
 	}
 }

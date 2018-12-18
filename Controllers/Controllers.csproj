@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Configuration\ConfigurationData.csproj" />
+    <ProjectReference Include="..\CoreDataStructure\CoreDataStructure.csproj" />
   </ItemGroup>
 
 </Project>

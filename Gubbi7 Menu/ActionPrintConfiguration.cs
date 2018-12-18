@@ -1,5 +1,6 @@
 ﻿using Smart_Menu;
 using Controllers;
+using System;
 
 namespace Gubbi7_Menu
 {
@@ -8,11 +9,6 @@ namespace Gubbi7_Menu
 		private ConfigController configController;
 		private string name;
 		private ConfigurationData configurationData;
-
-		public ActionPrintConfiguration(ConfigurationData configurationData)
-		{
-			configurationData = configurationData;
-		}
 
 		public ActionPrintConfiguration(string name)
 		{
@@ -27,6 +23,7 @@ namespace Gubbi7_Menu
 
 		public void Invoke()
 		{
+			Console.WriteLine("Printing file");
 			configController.PrintConfiguration(name);
 		}
 	}
