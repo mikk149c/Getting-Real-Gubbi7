@@ -17,15 +17,15 @@ namespace Controllers
 				string[] lines = File.ReadAllLines(s);
 				for (int i = 4; i < lines.Length; i++)
 				{
-					int weight, length, heaight, width;
+					int weight, length, height, width;
 					string[] tabs = lines[i].Split('\t');
 					DateTime date = DateTime.Parse(tabs[0]);
 					string termianlId = tabs[1];
 					weight = ParsData(tabs[2]);
 					length = ParsData(tabs[3]);
-					heaight = ParsData(tabs[4]);
+					height = ParsData(tabs[4]);
 					width = ParsData(tabs[5]);
-					parcelData.RegisterParcel(termianlId, date, weight, length, heaight, width);
+					parcelData.RegisterParcel(termianlId, date, weight, length, height, width);
 				}
 			}
 		}
