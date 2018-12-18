@@ -28,7 +28,6 @@ namespace Smart_Menu
 
 		public void Activate()
 		{
-			Console.Clear();
 			DisplayMenu();
 			if (!menuPointList.Count.Equals(0))
 			{
