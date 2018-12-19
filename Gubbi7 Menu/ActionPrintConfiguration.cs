@@ -8,7 +8,6 @@ namespace Gubbi7_Menu
 	{
 		private ConfigController configController;
 		private string name;
-		private ConfigurationData configurationData;
 
 		public ActionPrintConfiguration(string name)
 		{
