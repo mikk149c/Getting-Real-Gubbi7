@@ -6,7 +6,6 @@ namespace Controllers
 {
 	public class LogfileController
 	{
-		private LogfileRepo logfileRepo;
 
 		public void IngestLogfile(string path)
 		{

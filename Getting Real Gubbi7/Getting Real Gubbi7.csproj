@@ -60,5 +60,13 @@
       <Name>Gubbi7 Menu</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="out.txt" />
+    <Content Include="Taulov 01nov2018 %281%29.txt" />
+    <Content Include="Taulov 02nov2018 %281%29.txt" />
+    <Content Include="Taulov 29okt2018 %281%29.txt" />
+    <Content Include="Taulov 30okt2018 %281%29.txt" />
+    <Content Include="Taulov 31okt2018 %281%29.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
