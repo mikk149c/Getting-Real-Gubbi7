@@ -15,6 +15,7 @@ namespace ConfigurationData
 		private TimeSpan interval;
 		private List<DataType> data;
 
+		
 		public Configuration(string name, DateTime startTime, DateTime endTime, bool realativeTime, TimeSpan interval, List<DataType> data)
 		{
 			Name = name;

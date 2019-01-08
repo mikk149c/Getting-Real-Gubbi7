@@ -7,6 +7,7 @@ using Gubbi7_Menu;
 
 namespace Getting_Real_Gubbi7
 {
+	// STUBKODE for planlagte print
 	class SchedualController
 	{
 		public void DeleteSchedule(string name)

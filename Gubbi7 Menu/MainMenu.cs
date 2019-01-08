@@ -14,7 +14,7 @@ namespace Gubbi7_Menu
 			mainMenu.AddMenuPoint(new MainMenuCreateConfiguration());
 			mainMenu.AddMenuPoint(new MainMenuSchedulePrints());
 		}
-
+		//foretager et kald til metoden "Activate() som befinder sig i menu klassen
 		public void StartMenu()
 		{
 

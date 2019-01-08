@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Controllers
-{
+{'
+	//STUBKODE
 	public class SchedualController
 	{
 		private static SchedualController instance;
@@ -14,7 +15,7 @@ namespace Controllers
 		{
 
 		}
-
+		// Singleton
 		public static SchedualController Instance
 		{
 			get

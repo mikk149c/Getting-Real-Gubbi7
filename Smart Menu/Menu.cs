@@ -25,7 +25,7 @@ namespace Smart_Menu
 		{
 			menuPointList.Add(menuPoint);
 		}
-
+		// Denne metode står basically for at skrive menuen til konsollen, hvor menuen tilrettes efter hvert bruger input.
 		public void Activate()
 		{
 			DisplayMenu();
@@ -50,10 +50,12 @@ namespace Smart_Menu
 							break;
 					}
 				}
+				// Hvis key IKKE er = Escape + IKKE er = med Enter + hviss ExitAfterInWoke er false kører dette loop
 				while (!key.Equals(ConsoleKey.Escape) && !( key.Equals(ConsoleKey.Enter) && ExitAfterInWoke) );
 			
 			}
 			else
+			//fejlmelding, ingen menupunkter indlæst
 			{
 				Console.WriteLine("Der er ingen menupunkter");
 				Console.ReadKey();
@@ -73,13 +75,21 @@ namespace Smart_Menu
 
 		private void MovePointer(int v)
 		{
+			// temp1 sættes = original pointer værdi
 			int PointerTemp1 = pointer;
+			// pointer adderes med input parameter (kan være +1 eller -1)
 			pointer += v;
+			// Hvis pointer er mindre end nul, sættes pointer = 0
 			if (pointer < 0)
 			pointer = 0;
+			// Hvis pointer mere end menulistpunkter -1, så sættes pointer til menupunktcount -1 )
+			// dette sørger for at markeringen aldrig går udover menuen.
 			if (pointer > menuPointList.Count - 1)
 				pointer = menuPointList.Count - 1;
+			// Temp2 sættes = pointer += v eller menupointlist.count -1 kan være mellem 0 og 4ish
 			int PointerTemp2 = pointer;
+			// hvis temp1 (original værdi) ikke er = temp2 (ændret værdi) temp1 skrives til sort baggrund, temp2
+			// skrives til blå baggrund.
 			if (!PointerTemp1.Equals(PointerTemp2))
 			{
 				UpdateMenuPoint(PointerTemp1);

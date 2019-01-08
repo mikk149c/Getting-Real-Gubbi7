@@ -17,6 +17,7 @@ namespace CoreDataStructure
 
 		public string StationId { get { return stationId; } set { stationId = value; } }
 
+		// udskrivning til tekstfil
 		internal string GetData(DataType data, DateTime startTime, DateTime endTime)
 		{
 			List<Parcel> targetParcels = parcels.FindAll(x => x.Time >= startTime && x.Time < endTime);
